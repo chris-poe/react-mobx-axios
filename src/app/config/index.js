@@ -1,6 +1,6 @@
 export default {
-	api: {
-		baseURL: null,
-		timeout: 1000,
-	}
+  api: {
+    baseURL: null,
+    timeout: 1000,
+  },
 };

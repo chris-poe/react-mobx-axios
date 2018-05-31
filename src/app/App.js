@@ -10,7 +10,6 @@ import Screen from './components/Screen/Screen';
 const store = createStore(config);
 
 class App extends Component {
-
   render() {
     return (
       <Provider store={store}>
