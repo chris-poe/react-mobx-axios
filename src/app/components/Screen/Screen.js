@@ -1,5 +1,5 @@
 import React from 'react';
-import withStore from '../common/Helpers/withStore';
+import withStore from '../modules/Helpers/withStore';
 
 import './styles/styles.css';
 
