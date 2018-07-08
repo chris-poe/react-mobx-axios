@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import { colors } from './theme';
+import { colors } from '../theme';
 
 const styles = StyleSheet.create({
-  container: {
+  div: {
+    display: 'flex',
     backgroundColor: colors.white,
   },
   flex: {
-    display: 'flex',
     flex: 1,
   },
   stretch: {
@@ -23,6 +23,9 @@ const styles = StyleSheet.create({
   column: {
     flexDirection: 'column',
   },
+  vh: {
+    maxHeight: '100vh',
+  },
 });
 
 const Div = ({
@@ -32,27 +35,24 @@ const Div = ({
   center,
   row,
   column,
+  vh,
   style,
   ...props
 }) => (
   <div
     className={css(
-      styles.container,
+      styles.div,
       className,
       flex && styles.flex,
       stretch && styles.stretch,
       center && styles.center,
       row && styles.row,
-      column && styles.column
+      column && styles.column,
+      vh && styles.vh
     )}
     style={style}
     {...props}
   />
 );
 
-const Text = ({ type, className, style, ...props }) => {
-  const Text = type;
-  return <Text className={css(className)} style={style} {...props} />;
-};
-
-export { Div, Text };
+export default Div;

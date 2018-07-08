@@ -1,11 +1,11 @@
 import React from 'react';
 import withStore from '../modules/Helpers/withStore';
 
-import './styles/styles.css';
+import './styles';
 
 class Screen extends React.Component {
   render() {
-    return <div />;
+    return null;
   }
 }
 

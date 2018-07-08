@@ -3,9 +3,9 @@ const variables = {
 };
 
 const colors = {
+	white: '#fff',
   gray: '#ccc',
   blue: '#65a9f7',
-  darkBlue: '#1747c5',
 };
 
 export { variables, colors };

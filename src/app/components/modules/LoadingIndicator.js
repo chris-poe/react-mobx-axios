@@ -1,8 +1,8 @@
 import React from 'react';
-import loading from '../../assets/images/loading.svg';
+import Image from './Image';
 
 const LoadingIndicator = ({ size }) => (
-  <img src={loading} width={size} height={size} alt="loading" />
+  <Image name="loading" width={size} height={size} alt="loading" />
 );
 
 export default LoadingIndicator;

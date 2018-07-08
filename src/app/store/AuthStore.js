@@ -1,5 +1,4 @@
 import { decorate } from 'mobx';
-import { fromPromise } from 'mobx-utils';
 
 class AuthStore {
   constructor(store) {

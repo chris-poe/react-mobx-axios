@@ -1,7 +1,9 @@
-import rocket from '../../../assets/images/rocket.png';
+import noImage from '../../../assets/images/no_image.png';
+import loading from '../../../assets/images/loading.png';
 
 const images = {
-  rocket,
+  noImage,
+  loading,
 };
 
 const getImage = name => images[name];
