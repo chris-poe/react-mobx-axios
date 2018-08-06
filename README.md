@@ -1,3 +1,5 @@
+# React MobX Axios
+
 Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Table of Contents
@@ -9,6 +11,8 @@ Below you'll find information about performing common tasks. The most recent ver
   - [npm start](#npm-start)
   - [npm test](#npm-test)
   - [npm run build](#npm-run-build)
+  - [npm lint](#npm-lint)
+  - [npm format](#npm-format)
   - [npm run eject](#npm-run-eject)
 - [Supported Browsers](#supported-browsers)
 - [Supported Language Features and Polyfills](#supported-language-features-and-polyfills)
@@ -184,6 +188,18 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](#deployment) for more information.
+
+### `npm lint`
+
+Lints `src/` directory, logs errors and potential fixes.
+
+### `npm lint:fix`
+
+Like `npm lint`, but also auto fixes problems found by initial lint.
+
+### `npm format`
+
+Formats `src/` directory to Airbnb's .eslintrc extensible shared config.
 
 ### `npm run eject`
 
