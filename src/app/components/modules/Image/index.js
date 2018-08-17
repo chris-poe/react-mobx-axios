@@ -12,11 +12,9 @@ const styles = StyleSheet.create({
   },
 });
 
-const Image = ({ src, name, height, width, alt, contain, cover, ...props }) => (
+const Image = ({ src, name, alt, contain, cover, ...props }) => (
   <img
     src={name ? getImage(name) : src}
-    height={height}
-    width={width}
     className={css(contain && styles.contain, cover && styles.cover)}
     alt={alt || ''}
     role={!alt ? 'presentation' : null}

@@ -1,13 +1,8 @@
 import React from 'react';
 import { css } from 'aphrodite';
 
-const Form = ({ onSubmit, className, style, ...props }) => (
-  <form
-    onSubmit={onSubmit}
-    className={css(className)}
-    style={style}
-    {...props}
-  />
+const Form = ({ className, ...props }) => (
+  <form className={css(className)} {...props} />
 );
 
 export default Form;

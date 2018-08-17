@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, css } from 'aphrodite';
-import { colors } from '../theme';
 
 const styles = StyleSheet.create({
   center: {
@@ -8,14 +7,10 @@ const styles = StyleSheet.create({
   },
 });
 
-const Text = ({ type, className, center, style, ...props }) => {
-  const Text = type;
+const Text = ({ type, className, center, ...props }) => {
+  const Type = type || 'span';
   return (
-    <Text
-      className={css(className, center && styles.center)}
-      style={style}
-      {...props}
-    />
+    <Type className={css(className, center && styles.center)} {...props} />
   );
 };
 

@@ -54,10 +54,9 @@ const Button = withRouter(
   ({
     staticContext,
     history,
-    type,
-    value,
     onClick,
     routeTo,
+    className,
     text,
     primary,
     secondary,
@@ -66,12 +65,9 @@ const Button = withRouter(
     rounded,
     loading,
     flex,
-    style,
     ...props
   }) => (
     <button
-      type={type}
-      value={value}
       onClick={() => onClick || history.push(routeTo)}
       className={css(
         primary && [styles.button, styles.primary],
@@ -79,9 +75,9 @@ const Button = withRouter(
         animate && !disabled && !loading && styles.active,
         (disabled || loading) && styles.disabled,
         rounded && styles.rounded,
-        flex && styles.flex
+        flex && styles.flex,
+        className
       )}
-      style={style}
       disabled={disabled || loading}
       {...props}
     >
@@ -92,7 +88,7 @@ const Button = withRouter(
             secondary && styles.primaryText
           )}
         >
-          {text.toUpperCase()}
+          {text && text.toUpperCase()}
         </span>
       ) : (
         <LoadingIndicator size={25} />

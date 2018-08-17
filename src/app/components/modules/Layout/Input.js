@@ -12,26 +12,8 @@ const styles = StyleSheet.create({
   },
 });
 
-const Input = ({
-  type,
-  value,
-  name,
-  placeholder,
-  disabled,
-  className,
-  style,
-  ...props
-}) => (
-  <input
-    type={type}
-    value={value}
-    name={name}
-    placeholder={placeholder}
-    disabled={disabled}
-    className={css(styles.input, className)}
-    style={style}
-    {...props}
-  />
+const Input = ({ className, ...props }) => (
+  <input className={css(styles.input, className)} {...props} />
 );
 
 export default Input;

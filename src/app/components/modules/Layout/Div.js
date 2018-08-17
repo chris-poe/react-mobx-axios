@@ -29,28 +29,26 @@ const styles = StyleSheet.create({
 });
 
 const Div = ({
-  className,
   flex,
   stretch,
   center,
   row,
   column,
   vh,
-  style,
+  className,
   ...props
 }) => (
   <div
     className={css(
       styles.div,
-      className,
       flex && styles.flex,
       stretch && styles.stretch,
       center && styles.center,
       row && styles.row,
       column && styles.column,
-      vh && styles.vh
+      vh && styles.vh,
+      className
     )}
-    style={style}
     {...props}
   />
 );
