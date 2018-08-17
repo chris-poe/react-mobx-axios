@@ -7,8 +7,6 @@
   "rules": {
     // // disable mandatory .jsx
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    // disable mandatory trailing commas
-    "comma-dangle": 0,
     // disable prop-type validation
     "react/prop-types": 0
   },

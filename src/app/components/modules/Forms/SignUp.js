@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import { Div, Form, Input, Button } from '../Layout';
-import withStore from '../Helpers/withStore';
+import { withStore } from '../Helpers';
 import styles from './styles';
 
-class SignUp extends React.Component {
+class SignUp extends Component {
   constructor() {
     super();
     this.state = {

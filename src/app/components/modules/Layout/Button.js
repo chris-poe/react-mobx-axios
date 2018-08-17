@@ -4,7 +4,7 @@ import { pulse } from 'react-animations';
 
 import LoadingIndicator from '../LoadingIndicator';
 import { colors } from '../theme';
-import withRouter from '../Helpers/withRouter';
+import { withRouter } from '../Helpers';
 
 const styles = StyleSheet.create({
   button: {

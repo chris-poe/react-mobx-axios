@@ -43,8 +43,8 @@ class AuthStore {
   };
 
   reset = () => {
-    this.setToken(undefined);
-    this.sessionStatus = undefined;
+    this.setToken(null);
+    this.sessionStatus = null;
   };
 }
 

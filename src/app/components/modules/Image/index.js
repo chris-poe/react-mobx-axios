@@ -17,8 +17,9 @@ const Image = ({ src, name, height, width, alt, contain, cover, ...props }) => (
     src={name ? getImage(name) : src}
     height={height}
     width={width}
-    alt={name}
     className={css(contain && styles.contain, cover && styles.cover)}
+    alt={alt || ''}
+    role={!alt ? 'presentation' : null}
     {...props}
   />
 );
