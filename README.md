@@ -1,9 +1,22 @@
 # React MobX Axios
 
-Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+Boilerplate for React using create-react-app, MobX, and Axios.
+
+> **Note**. This repo is mostly for my personal use. For that reason some documentation may be lacking.
+
+## Setup
+
+```bash
+npm install && npm start
+# or
+yarn install && yarn start
+```
 
 ## Table of Contents
-
+- [Modules](#modules)
+  - [Helper Modules](#helper-modules)
+  - [Image Modules](#image-modules)
+  - [Layout Modules](#layout-modules)
 - [Updating to New Releases](#updating-to-new-releases)
 - [Sending Feedback](#sending-feedback)
 - [Folder Structure](#folder-structure)
@@ -103,6 +116,122 @@ Below you'll find information about performing common tasks. The most recent ver
   - [Moment.js locales are missing](#momentjs-locales-are-missing)
 - [Alternatives to Ejecting](#alternatives-to-ejecting)
 - [Something Missing?](#something-missing)
+
+# Modules
+
+Below are built in modules for commonly used features.
+
+## Helper Modules
+
+### `withStore()`
+
+Allows you to easily inject MobX `store` when exporting a default class or function component.
+
+```js
+import React, { Component } from 'react';
+
+class MyComponent extends Component {
+  render() {
+    return null;
+  }
+}
+
+export default withStore(MyComponent); // Injects store into MyComponent
+```
+
+### `withRouter()`
+
+Default usage from `react-router-dom` (Reference [here](https://reacttraining.com/react-router/web/api/withRouter))
+
+## Image Modules
+
+### Importing Images
+
+Import images within `src/components/modules/Image/images.js`.
+
+```js
+import imageName from '<path-to-image-folder>';
+import otherImageName from '<path-to-image-folder>';
+
+const images = {
+  imageName,
+  otherImageName,
+};
+
+// Used to get image based on name prop
+const getImage = name => images[name];
+
+export default getImage;
+```
+
+### Calling Imported Images
+
+```js
+import Image from '<path-to-image-module>';
+
+<Image name="imageName" />
+```
+
+### Image props
+
+| Prop | Type | Default | Note |
+|---|---|---|---|
+| `name` | `string` | `null` | Passes value into `getImage()` and returns asset imported in `images.js`.
+| `src` | `string` | `null` | Default HTML `src` attribute.
+| `alt` | `string` | "" | Default HTML `alt` attribute. If set, role is set to `null`.
+| `role` | `string` | "presentation" | Default HTML `role` attribute. If no `alt` attribute is set, defaults to "presentation".
+
+## Layout Modules
+
+> **Note**. Experimental components that wrap default HTML elements. Inspirated by React Native style UI components.
+
+### `<Button />`
+
+| Prop | Type | Default | Note |
+|---|---|---|---|
+| `routeTo` | `string` | `null` | If preset routes to location specified within your router.
+| `text` | `string` | `null` | Sets inner text value of button (defaults to uppercase).
+| `primary` | `boolean` | `false` | Sets a default style for all primary call-to-action buttons.
+| `secondary` | `boolean` | `false` | Sets a default style for all secondary call-to-action buttons.
+| `animate` | `boolean` | `false` | Sets an animation when button is active. Relys on `react-animations` library.
+| `disabled` | `boolean` | `false` | Used to disable button. Useful in conjunction with promise based actions.
+| `loading` | `boolean` | `false` | Shows a loading indicator. Useful in conjunction with promise based actions.
+| `rounded` | `boolean` | `false` | Sets a default border radius (defaults to `5px`).
+| `flex` | `boolean` | `false` | Sets style `flex: 1` on element.
+
+
+### `<Div />`
+
+| Prop | Type | Default | Note |
+|---|---|---|---|
+| `flex` | `boolean` | `false` | Sets style `flex: 1` on element.
+| `stretch` | `boolean` | `false` | Sets style `alignSelf: 'stretch'` on element.
+| `center` | `boolean` | `false` | Sets style `alignItems: 'center', justifyContent: 'center'` on element.
+| `row` | `boolean` | `false` | Sets style `flexDirection: 'row'` on element.
+| `column` | `boolean` | `false` | Sets style `flexDirection: 'column'` on element.
+| `vh` | `boolean` | `false` | Sets style `maxHeight: '100vh'` on element.
+
+### `<Form />`
+
+> **Note**. Currently default HTML attributes.
+
+### `<Input />`
+
+> **Note**. Currently default HTML attributes.
+
+### `<Text />`
+
+| Prop | Type | Default | Note |
+|---|---|---|---|
+| `type` | `string` | `null` | Creates an HTML tag based on the value passed.
+
+### `<TextArea />`
+
+> **Note**. Currently default HTML attributes.
+
+# Common Tasks
+
+Below you'll find information about performing common tasks. The most recent version of this guide is available [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
 
 ## Updating to New Releases
 
