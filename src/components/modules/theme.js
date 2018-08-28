@@ -3,7 +3,7 @@ const variables = {
 };
 
 const colors = {
-	white: '#fff',
+  white: '#fff',
   gray: '#ccc',
   blue: '#65a9f7',
 };

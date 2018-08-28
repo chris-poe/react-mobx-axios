@@ -5,7 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import config from './config';
 import createStore from './store';
 
-import Screen from './components/Screen/Screen';
+import Screen from './components/routes/Screen';
 
 const store = createStore(config);
 

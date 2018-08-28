@@ -1,5 +1,4 @@
-import { decorate, observable, action } from 'mobx';
-import { fromPromise } from 'mobx-utils';
+import { decorate } from 'mobx';
 
 class UiStore {
   constructor(store) {

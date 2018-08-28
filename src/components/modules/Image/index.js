@@ -17,7 +17,7 @@ const Image = ({ src, name, alt, contain, cover, ...props }) => (
     src={name ? getImage(name) : src}
     className={css(contain && styles.contain, cover && styles.cover)}
     alt={alt || ''}
-    role={!alt ? 'presentation' : null}
+    role={!alt && 'presentation'}
     {...props}
   />
 );
