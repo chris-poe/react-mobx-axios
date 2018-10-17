@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withStore } from '../../modules/Helpers';
+import { withStore } from '../../common/Helpers';
 
 import './styles';
 
