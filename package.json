@@ -22,7 +22,6 @@
   "scripts": {
     "start": "react-scripts start",
     "clean": "rm -rf node_modules/ && npm install",
-    "clean:yarn": "rm -rf node_modules/ && yarn cache clean && yarn",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
