@@ -9,7 +9,7 @@
     "mobx-cookie": "^2.0.1",
     "mobx-react": "^5.3.6",
     "mobx-utils": "^4.0.1",
-    "node-sass": "^4.9.3",
+    "node-sass": "^7.0.0",
     "normalizr": "^3.2.4",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
